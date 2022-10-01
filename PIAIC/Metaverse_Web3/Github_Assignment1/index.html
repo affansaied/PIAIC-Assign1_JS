@@ -1,0 +1,398 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Affan Saeed - Metaverse developer Web3.0</title>
+<!-- Script tag can also be placed here -->
+</head>
+<body>
+
+<script>
+    //console.log('Assignment#2. Personal Message: Store a persons name in a variable, and print a message to that person. Your message should be simple, such as, Hello Eric,would you like to learn some Python today?');
+    var personName ="Eric Sibestian";
+    console.log('Assignment#2.  Hello '+personName+',would you like to learn some Python today?');
+
+    //console.log('Assignment#3. Name Cases: Store a persons name in a variable, and then print that persons name in lowercase, uppercase, and titlecase');
+    console.log('Assignment#3. Hello '+personName.toLowerCase()+', - '+personName.toUpperCase()+', - '+strTitleCase(personName));
+
+    //console.log('Assignment#4. Famous Quote: Find a quote from a famous person you admire. Print the quote and the name of its author. Your output should look something like the following, including the quotation marks:');
+    console.log('Assignment#4.\"We are going through fire: the sunshine has yet to come. But I have no doubt that with Unity, Faith and Discipline we will compare with any nation of the world. Are you prepared to undergo the fire? You must make up your minds now. We must sink individualism and petty jealousies and make up our minds to serve the people with honesty and faithfulness. We are passing through a period of fear, danger, and menace. We must have faith, unity and discipline.\" - \"Muhammed Ali Jinnah\" ');
+
+    //console.log('Assignment#5. Famous Quote 2: Repeat Exercise 4, but this time store the famous persons name in a variable called famous_person. Then compose your message and store it in a new variable called message. Print your message.
+    var famous_person="Muhammed Ali Jinnah";
+    var message = "ایمان، اتحاد، نظم";
+    console.log(famous_person+' - said once - '+message);
+
+    //console.log('Assignment#6. Stripping Names: Store a person’s name, and include some whitespace characters at the beginning and end of the name. Make sure you use each character combination, "\t" and "\n", at least once. Print the name once, so the whitespace around the name is displayed. Then print the name after striping the white spaces.
+    var person_name = "\t Eric \tSiebestian \t";
+    console.log('\"'+person_name +'\" - \"'+person_name.trim()+'\"');
+
+    //console.log('Assignment#7. Number Eight: Write addition, subtraction, multiplication, and division operations that each result in the number 8. Be sure to enclose your operations in print statements to see the results.
+    document.writeln('Magic Number 8: => 4+4='+ parseInt(4+4) +', 10-2='+ parseInt(10-2) +', 2*4='+ 2*4 +', 16/2='+16/2);
+
+    //console.log('Assignment#8. You should create four lines that look like this:
+    console.log('5+3='+parseInt(5+3));
+    console.log('10-2='+parseInt(10-2));
+    console.log('2*4='+ 2*4);
+    console.log('16/2='+16/2);
+
+    //console.log('Assignment#9. Favorite Number: Store your favorite number in a variable. Then, using that variable, create a message that reveals your favorite number. Print that message.
+    var favNo = 777;
+    document.writeln('My favorite Number is ='+favNo+'! ');
+
+    //console.log('Assignment#10. Adding Comments: Choose two of the programs you’ve written, and add at least one comment to each. If you don’t have anything specific to write because your programs are too simple at this point, just add your name and the current date at the top of each program file. Then write one sentence describing what the program does.
+    //RolldNo: PIAIC110213
+    console.log('My all of the above programs are single line commented!');
+
+    //console.log('Assignment#11. Names: Store the names of a few of your friends in a array called names. Print each person’s name by accessing each element in the list, one at a time.
+    var myFriends = ['Friend1','Friend2','Friend3','Friend4','Friend5'];
+    myFriends.forEach(element => { console.log(element);});
+console.log('');
+
+    //console.log('Assignment#12. Greetings: Start with the array you used in Exercise 11, but instead of just printing each person’s name, print a message to them. The text of each message should be the same, but each message should be personalized with the person’s name.
+    myFriends.forEach(element => { console.log('Ohiyo Gozimus - أهلاً وسهلاً - 你好 NiHao - Dear '+element);});
+console.log('');
+
+    //console.log('Assignment#13. Your Own Array: Think of your favorite mode of transportation, such as a motorcycle or a car, and make a list that stores several examples. Use your list to print a series of statements about these items, such as “I would like to own a Honda motorcycle.”
+    var personalArr = ['Horse','Elephant','Farari','PowerParachute','squirrel glider suite']
+    personalArr.forEach(element => { console.log(' Would like to fly with '+element+'?');});
+console.log('');
+
+    //console.log('Assignment#14. Guest List: If you could invite anyone, living or deceased, to dinner, who would you invite? Make a list that includes at least three people you’d like to invite to dinner. Then use your list to print a message to each person, inviting them to dinner.
+    var DinnerInvArr = ['Asif Zardari','Nawaz Sharif','Imran Khan','Maryan Nawaz','Molana...']
+    DinnerInvArr.forEach(element => { console.log(' I would eat you... '+element+' if i get a chance!');});
+    console.log('');
+    var totalDinnerInvited = DinnerInvArr.slice();
+
+    //console.log('Assignment#15. Changing Guest List: You just heard that one of your guests can’t make the dinner, so you need to send out a new set of invitations. You’ll have to think of someone else to invite.
+    console.log(DinnerInvArr[DinnerInvArr.length-1]+' Not Coming');
+    DinnerInvArr[DinnerInvArr.length-1] = 'Shabaz notSharif';
+    DinnerInvArr.forEach(element => { console.log(' I would eat you... '+element+' if i get a chance!');});
+
+
+console.log('');
+    //console.log('Assignment#16. More Guests: You just found a bigger dinner table, so now more space is available. Think of three more guests to invite to dinner.
+    console.log('New Rascals added - Rana Sana, Shaikh Rasheed, Moodi!');
+    DinnerInvArr.unshift('Rana Sana');
+    DinnerInvArr.splice(5,0,'Shaikh Rasheed')
+    totalDinnerInvited = DinnerInvArr.concat();
+    DinnerInvArr.splice(DinnerInvArr.length-1,0,'Moodis')
+    DinnerInvArr.forEach(element => { console.log(' I would eat you... '+element+' if i get a chance!');});
+    
+    console.log('');
+    //console.log('Assignment#17. Shrinking Guest List: You just found out that your new dinner table won’t arrive in time for the dinner, and you have space for only two guests.
+    console.log('Only Two guests seating is available today! presently in list='+DinnerInvArr.length);
+    var guestsoutList = DinnerInvArr.splice(0,DinnerInvArr.length-2);
+    guestsoutList.forEach(element => {console.log(element+' You are out of list tonight!');});
+    DinnerInvArr.forEach(element => { console.log(element+' You are welcome tonight!'); });
+    
+
+    console.log('');
+    //console.log('Assignment#18. Seeing the World: Think of at least five places in the world you’d like to visit.
+    var worldBestPlaces2022 = ['Pakistan','Africa','Bahama','Antartic','Hawai'];
+    console.log('Original Array= '+worldBestPlaces2022);
+    console.log('After sorting with Slice= '+worldBestPlaces2022.slice().sort());
+    console.log('After sorting Original= '+worldBestPlaces2022);
+    console.log('After Reverse sorting with Slice= '+worldBestPlaces2022.slice().sort().reverse());
+    console.log('After sorting Original= '+worldBestPlaces2022);
+    console.log('Original sorting = '+worldBestPlaces2022.sort());
+    console.log('Original = '+worldBestPlaces2022);
+
+    console.log('');
+    //console.log('Assignment#19. Dinner Guests: Working with one of the programs from Exercises 14 through 18, print a message indicating the number of people you are inviting to dinner.
+    document.writeln('<br/> People invited to dinner tonight! '+totalDinnerInvited.length);
+    document.writeln(' Are ='+totalDinnerInvited);
+
+    console.log('');
+    //console.log('Assignment#20. Think of something you could store in a array. For example, you could make a list of mountains, rivers, countries, cities, languages, or anything else you’d like. Write a program that creates a list containing these items.
+    const original = ['🦊'];
+    var newArray = original.concat('🦄');
+    newArray = [...original, '🦄'];
+    newArray = [...newArray,'K2','Everest','affansaied@ymail.com','Amazon River','Bahrain',777, '🦄']
+    document.writeln('<br/> My new Type of Array contains = '+newArray);
+    console.log('<br/> My new Type of Array contains = '+newArray);
+
+    console.log('');
+    //console.log('Assignment#21. They think of something you could store in a JavaScript Object. Write a program that creates Objects containing these items.
+    var studentobject = {name : "David Rayy",sclass : "VI",rollno : 12 };
+    console.log(studentobject);
+
+    console.log('');
+    //console.log('Assignment#22. Intentional Error: If you haven’t received an array index error in one of your programs yet, try to make one happen. Change an index in one of your programs to produce an index error. Make sure you correct the error before closing the program.
+    console.log('guestsoutList array total elements='+DinnerInvArr.length);
+    console.log('guestsoutList element at index 11='+DinnerInvArr[11]);
+    console.log('guestsoutList element at index 11='+DinnerInvArr[DinnerInvArr.length-1]);
+
+    console.log('');
+    //console.log('Assignment#23. Conditional Tests: Write a series of conditional tests. Print a statement describing each test and your prediction for the results of each test. Your code should look something like this:
+        var Formula1= 'FormlaTwo';
+        var Formula2;
+        let car = ['subaru','777','Formula1',Formula1,777,false,' ',true,Formula2,null];
+        car.forEach(element=>{console.log('"'+element +' is=777? " - '+ (element!=null && element.length>1) || eval(element!=777) );})
+
+    console.log('');
+    //console.log('Assignment#24. More Conditional Tests: You don’t have to limit the number of tests you create to 10. If you want to try more comparisons, write more tests. Have at least one True and one False result for each of the following:        
+    var ite = 0;
+        car.forEach(element=>{
+            console.log(ite++ +'- ');
+        console.log('"'+element +' is==777? " - '+ (element==777 || element=='777'));
+        
+        if(!!element)
+            console.log('"'+element.toUpperCase +' is==subaru? " - '+ (element.toUpperCase=='subaru'));
+        else
+            console.log('Null String here!!!');
+
+        console.log('"'+element +' is>=777? " - '+ (element>=777));
+        console.log('"'+element +' is<=777? " - '+ (element<=777));
+        console.log('"'+element +' >=757 && <=787? " - '+ (element>=757 && element<=787));
+        console.log('"'+element +' >=757 || <=787? " - '+ (element>=757 || element<=787));
+        
+                })
+
+        console.log(car.includes(777)?"777 is in array":"777 is NOT in array");
+        console.log(!car.includes('subaru')?"subaru is NOT in array":"subaru is in array");
+
+        console.log('');
+    //console.log('Assignment#25. Alien Colors #1: Imagine an alien was just shot down in a game. Create a variable called alien_color and assign it a value of 'green', 'yellow', or 'red'.
+    var alien_color = ['green','yellow','red'];
+    let guessColor = prompt("Please enter Alien Color", "Blue? White? ...");
+
+    if (guessColor == 'green') 
+        alert('Player has just earned 5 points!');
+    else
+        console.log('Player just entered '+guessColor+' not green!');
+    
+        
+    console.log('');
+    //console.log('Assignment#26. Alien Colors #2: Choose a color for an alien as you did in Exercise 25, and write an if-else chain.
+
+    alien_color.forEach(element=>{if(element=='green')console.log('Player earned 5 points at='+element);else console.log('Player earned 10 points at='+element);})
+
+    console.log('');
+    //console.log('Assignment#27. Alien Colors #3: Turn your if-else chain from Exercise 5-4 into an if-else chain.
+    alien_color.forEach(element=>{if(element=='green')console.log('Player earned 5 points at='+element);else if(element=='yellow') console.log('Player earned 10 points at='+element); else if(element=='red') console.log('Player earned 15 points at='+element);})
+
+
+
+    console.log('');
+    //console.log('Assignment#28. Stages of Life: Write an if-else chain that determines a person’s stage of life. Set a value for the variable age, and then:
+    var personAge = [3,1,2,11,17,21,35,55,65,64,66]    
+    personAge.forEach(element=>{if(element< 2)console.log('Babys Home!!!');else if(element>1 && element<4) console.log('Toddler here!'); else if(element>3 && element<13) console.log('Kid Here!');else if(element>12 && element<20) console.log('Teenager here!');else if(element>19 && element<65) console.log('Adult here!');else if(element>64) console.log('Elder here!');})
+
+    console.log('');
+    //console.log('Assignment#29. Favorite Fruit: Make a array of your favorite fruits, and then write a series of independent if statements that check for certain fruits in your array.
+    var favorite_fruits = ['Pomgranet','Mango','Pineapple','Banana','Apricot','WallNut'];
+    favorite_fruits.forEach(element=>{if(element == 'Mango')console.log('I Like mango');else if(element>'banana') console.log('I do eat bananas every other day'); else if(element=='Pomgranet') console.log('Pomgranet makes you spritually strong!');else if(element=='wallnut') console.log('WallNut makes your internal force strong');else if(element=='Pineapple' ) console.log('Apples keeps a doctor away!');})
+
+    console.log('');
+    //console.log('Assignment#30. Hello Admin: Make a array of five or more usernames, including the name 'admin'. Imagine you are writing code that will print a greeting to each user   after they log in to a website. Loop through the array, and print a greeting to each user:
+    var system_users = ['Walton','James','admin','Hashi','Raphel','Nirma'];
+    personAge.forEach(element=>{if(element=='admin')console.log('Hello Admin! would you like to see the report?');else console.log('Hello '+element+' Thankyou for logging again'); })
+
+    console.log('');
+    //console.log('Assignment#31. No Users: Add an if test to Exercise 28 to make sure the list of users is not empty.
+    if(system_users.length>0)
+        console.log('Total uses in the system list='+system_users.length);
+    
+        var system_usersRemoved = system_users.splice(0,system_users.length);
+        console.log('Now Total uses in the system list='+system_users.length);
+    if(system_users.length<1)
+        console.log('We need to add some more users to list!');
+
+    console.log('');
+    //console.log('Assignment#32. Checking Usernames: Do the following to create a program that simulates how websites ensure that everyone has a unique username.
+    var someMoreUsers = ['Sidael','JAMES','user1','HaSHi','adMIN','Reema'];
+    console.log('Users before Addition- '+someMoreUsers);
+    var temp = someMoreUsers.toString().toLowerCase();
+    system_usersRemoved.forEach(element=>{if(temp.indexOf(element.toLowerCase())>-1) console.log(element+' is Already in the list!'); else someMoreUsers.push(element); })
+    console.log(someMoreUsers);
+
+    console.log('');
+    //console.log('Assignment#33. Ordinal Numbers: Ordinal numbers indicate their position in a array, such as 1st or 2nd. Most ordinal numbers end in th, except 1, 2, and 3.
+    var ordnums =[1,2,3,4,5,6,7,8,9];
+    ordnums.forEach(element=>{if(element==1) console.log(element+'st'); else if(element==2) console.log(element+'nd'); else if(element==3) console.log(element+'rd'); else console.log(element+'th');})
+
+    console.log('');
+    //console.log('Assignment#34. Pizzas: Think of at least three kinds of your favorite pizza. Store these pizza names in a array, and then use a for loop to print the name of each pizza.
+    var pizzas = ['Fujita','Tandoori','doubleCheese']
+    pizzas.forEach(element=>{console.log('I like '+element +' Pizza');})
+    console.log(pizzas[1].toString() +' is my most favorite pizza');
+
+    console.log('');
+    //console.log('Assignment#35. Animals: Think of at least three different animals that have a common characteristic. Store the names of these animals in a list, and then use a for loop to print out the name of each animal.
+    var animals = ['Lion','Dog','Horse']
+    animals.forEach(element=>{console.log('I like '+element +' as Pet');})
+    console.log(animals[1].toString() +' is my most favorite pet');
+
+    console.log('');
+    //console.log('Assignment#36. T-Shirt: Write a function called make_shirt() that accepts a size and the text of a message that should be printed on the shirt. The function should print a sentence summarizing the size of the shirt and the message printed on it. Call the function.
+    make_shirt(19,'Dolce and Gabbana');
+
+    console.log('');
+    //console.log('Assignment#37. Large Shirts: Modify the make_shirt() function so that shirts are large by default with a message that reads I love JavaScript. Make a large shirt and a medium shirt with the default message, and a shirt of any size with a different message.
+    make_shirt(25,'I Love JavaScript');
+    make_shirt(35,'PIAIC Metaverse Assignement!');
+
+    console.log('');
+    //console.log('Assignment#describe_city
+    describe_city('karachi','Pakistan');
+    describe_city('RahimYar Khan','Pakistan');
+    describe_city('lahore','Pakistan');
+
+    console.log('');
+    //console.log('Assignment#39. City Names: Write a function called city_country() that takes in the name of a city and its country. The function should return a string formatted like this:  "Lahore, Pakistan"
+    city_country('Lahore','Pakistan');
+
+    console.log('');
+    //console.log('Assignment#40. Album: Write a function called make_album() that builds a Object
+    var librarySet  = make_album('MichelJakson','Life from Death','2')
+    librarySet.forEach(element=>{console.log(element);})
+
+
+    console.log('');
+    //console.log('Assignment#41. Magicians: Make a array of magician’s names. Pass the array to a function
+    
+    var magitiansList =[];
+    magitiansList.push('David Copperfield');
+    magitiansList.push('Doug Henning');
+    magitiansList.push('Siegfried and Roy');
+    magitiansList.push('Lance Burton');
+    magitiansList.push('Ricky Jay');
+    magitiansList.push('Mark Wilson');
+    magitiansList.push('Penn and Teller');
+    magitiansList.push('Harry Anderson');
+    show_magicians(magitiansList);
+
+    console.log('');
+    //console.log('Assignment#42. Great Magicians: Start with a copy of your program from Exercise 39.
+    var cntr=0;
+    var magitiansList_great = magitiansList.concat();
+    magitiansList.forEach(element=>{magitiansList_great[cntr]='The Great '+element;cntr++;})
+    show_magicians(magitiansList_great);
+
+
+    console.log('');
+    //console.log('Assignment#43. Unchanged Magicians: Start with your work from Exercise 40. Call the
+    console.log('Original Array *'+magitiansList);
+    console.log('Great Array *'+magitiansList_great);
+
+    console.log('');
+    //console.log('Assignment#44. Sandwiches: Write a function that accepts a array of items a person wants
+    var sandwit_addons = [];
+
+    console.log('Original sandwitch!');
+    sandwitch_order(sandwit_addons);
+
+    sandwit_addons.push('Eggs');
+    sandwit_addons.push('Marmlade');
+
+    console.log('After addons1 sandwitch!');
+    sandwitch_order(sandwit_addons);
+
+    sandwit_addons.push('Fish');
+    sandwit_addons.push('pepper');
+
+    console.log('After addons2 sandwitch!');
+    sandwitch_order(sandwit_addons);
+
+    sandwit_addons.push('Hot Pizza flavour!');
+
+    console.log('After addons3 sandwitch!');
+    sandwitch_order(sandwit_addons);
+
+    console.log('');
+    //console.log('Assignment#45. Cars: Write a function that stores information about a car in a Object.
+carMake('Toyota','GLI 2050','White color',' and Accurate GPS Worldwide',' with extraComfort ');
+
+
+console.log(' Program Ends Here!');
+console.log(' Credits to Affan Saied - PIAIC batch 38 Seat PIAIC110213!');
+console.log('More details on email affansaied@gmail.com');
+
+    function carMake(manufacture,model,...other){
+        console.log('Viechele '+manufacture +' model '+model +' with extra features '+other +' is ready to serve you!');
+        }
+
+    
+    function sandwitch_order(sandwit_addons){
+        sandwit_addons.forEach(element=>{console.log(element+' Added to sandwitch! mmmm....');})
+        }
+
+
+    function make_album(artistName,albumTitle,tracks){
+        var ab_artistName = artistName;
+        var ab_albumTitle = albumTitle;
+        var ab_tracks = tracks;
+        
+        var album=[ab_artistName,ab_albumTitle,ab_tracks];
+
+        var libraryAlbums = [];
+
+        album.ab_artistName = artistName;
+        album.ab_albumTitle = albumTitle + 'Part1';
+        album.ab_tracks = tracks;
+        album=[artistName,albumTitle+'Part1',tracks];
+        libraryAlbums.push(album);
+        
+        album.ab_artistName = artistName;
+        album.ab_albumTitle = albumTitle + 'Part2';
+        album.ab_tracks = tracks;
+        album=[ab_artistName,ab_albumTitle,ab_tracks];
+        libraryAlbums.push(album);
+
+        
+        album.ab_artistName = artistName;
+        album.ab_albumTitle = albumTitle + 'Part3';
+        album.ab_tracks = tracks;
+        album=[ab_artistName,ab_albumTitle,ab_tracks];
+        libraryAlbums.push(album);
+
+
+            return libraryAlbums;
+        }
+
+    function show_magicians(magitianlist){
+        magitianlist.forEach(element=>{console.log(element);})
+        }
+
+    function city_country(City,Country){
+            return console.log('City '+City +' , Country '+Country);
+        }
+
+    function describe_city(City,Country){
+        var pakCities = ['Karachi','Islamabad','Quetta','Lahore','Sibi'];
+
+        if(City.indexOf(pakCities.toString().toLowerCase())>-1)
+            return console.log('City '+City +' is in Country '+Country);
+        else 
+            return console.log('Unknown city '+City);
+
+        }
+
+
+    function make_shirt(size,textonChest){
+        if(size<20)
+            return console.log('This shirt Small size is '+size +' and Texton CHest is '+textonChest);
+        else if(size>19 && size<35)
+            return console.log('This shirt Medium size is '+size +' and Texton CHest is '+textonChest);
+            else if(size>34 )
+            return console.log('This shirt Large size is '+size +' and Texton CHest is '+textonChest);
+
+        }
+    
+
+
+    function strTitleCase(toTitle){
+    return toTitle
+    .split(' ')
+    .map(word => {
+      return word.charAt(0).toUpperCase() +
+             word.slice(1).toLowerCase();
+    })
+    .join(' ');
+}
+
+</script>
+	
+
+</body>
+</html>
